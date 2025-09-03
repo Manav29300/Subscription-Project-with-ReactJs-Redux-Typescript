@@ -1,0 +1,29 @@
+{
+    "name": "auth",
+    "active": true,
+    "routes": [
+        {
+            "path": "/login",
+            "component": "LoginPage"
+        },
+        {
+            "path": "/account",
+            "authorization": true,
+            "component": "AccountPage"
+        }
+    ],
+    "store": {
+        "slices": {
+            "auth": {
+                "name": "auth",
+                "path": "src/modules/auth/redux/slices/authSlice.ts"
+            }
+        },
+        "actions": {
+            "auth": {
+                "name": "auth",
+                "path": "src/modules/auth/redux/actions/authAction.ts"
+            }
+        }
+    }
+}
